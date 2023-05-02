@@ -318,8 +318,23 @@ def main(window):
     fire3.on()
     fire4 = Fire(500, HEIGHT - block_size - 64, 16, 32)
     fire4.on()
+    fire5 = Fire(1300, HEIGHT - block_size - 64, 16, 32)
+    fire5.on()
+    fire6 = Fire(1400, HEIGHT - block_size - 64, 16, 32)
+    fire6.on()
+    fire7 = Fire(1500, HEIGHT - block_size - 64, 16, 32)
+    fire7.on()
+    fire8 = Fire(1600, HEIGHT - block_size - 64, 16, 32)
+    fire8.on()
+    fire9 = Fire(1700, HEIGHT - block_size - 64, 16, 32)
+    fire9.on()
+    fire10 = Fire(1800, HEIGHT - block_size - 64, 16, 32)
+    fire10.on()
+    fire11 = Fire(1900, HEIGHT - block_size - 64, 16, 32)
+    fire11.on()
+    
     floor = [Block(i * block_size, HEIGHT - block_size, block_size)
-             for i in range(-WIDTH // block_size, WIDTH * 2 // block_size)]
+             for i in range(-WIDTH // block_size, WIDTH * 10 // block_size)]
     objects = [*floor, Block(0, HEIGHT - block_size * 2, block_size),
                Block(block_size * 2, HEIGHT - block_size * 4, block_size), 
                Block(block_size * 3, HEIGHT - block_size * 4, block_size),
@@ -328,8 +343,17 @@ def main(window):
                Block(block_size * 6, HEIGHT - block_size * 5, block_size),
                Block(block_size * 7, HEIGHT - block_size * 4, block_size),
                Block(block_size * 8, HEIGHT - block_size * 3, block_size),
-               Block(block_size * 9, HEIGHT - block_size * 2, block_size),
-               fire1, fire2, fire3, fire4]
+               Block(block_size * 9, HEIGHT - block_size * 3, block_size),
+               Block(block_size * 11, HEIGHT - block_size * 4, block_size), 
+               Block(block_size * 12, HEIGHT - block_size * 4, block_size),
+               Block(block_size * 15, HEIGHT - block_size * 6, block_size),
+               Block(block_size * 16, HEIGHT - block_size * 6, block_size),
+               Block(block_size * 18, HEIGHT - block_size * 5, block_size),
+               Block(block_size * 19, HEIGHT - block_size * 4, block_size),
+               Block(block_size * 20, HEIGHT - block_size * 3, block_size),
+               Block(block_size * 22, HEIGHT - block_size * 2, block_size),
+               fire1, fire2, fire3, fire4, fire5, fire6, fire7, fire8, fire9,
+               fire10, fire11]
     
     offset_x = 0
     scroll_area_width = 200
@@ -352,6 +376,13 @@ def main(window):
         fire2.loop()
         fire3.loop()
         fire4.loop()
+        fire5.loop()
+        fire6.loop()
+        fire7.loop()
+        fire8.loop()
+        fire9.loop()
+        fire10.loop()
+        fire11.loop()
         handle_move(player, objects)
         draw(window, background, bg_image, player, objects, offset_x)
 
